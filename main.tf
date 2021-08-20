@@ -11,13 +11,9 @@ terraform {
   }
 }
 
-# provider block. Configure the Azurerm provider with Service Principal credentials
+# provider block. auth via cli
 provider "azurerm" {
   features {}
-#  subscription_id = "3593d278-121f-4fec-a50c-2cb628cf6027"
-#  tenant_id       = "ff7706a2-9e7b-4760-b237-a553008d17c2"
-# client_id       = "524c4acb-fb4d-43d1-a3af-0802a74d31aa"
-#  client_secret   = "zf16Dz1bXQoDHj.L_cGbJN8RDPsTsF9L-n"
 }
 
 #create nsg
