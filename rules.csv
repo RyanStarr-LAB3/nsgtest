@@ -1,3 +1,3 @@
 ﻿name,rule_name,priority,direction,access,protocol,source_port_range,destination_port_range,source_address_prefix,destination_address_prefix
-http,http,201,Inbound,Allow,TCP,*,80,202.130.215.24/32,192.168.2.0/24
-rdp,rdp,202,Inbound,Allow,TCP,*,3389,202.130.215.24/32,192.168.2.0/24
+http,http-in-allow,201,Inbound,Allow,TCP,*,80,202.130.215.24/32,192.168.2.0/24
+rdp,rdp-in-allow,202,Inbound,Allow,TCP,*,3389,202.130.215.24/32,192.168.2.0/24

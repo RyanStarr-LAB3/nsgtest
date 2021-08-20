@@ -1,4 +1,5 @@
 # terraform block
+# !important! the first column of the locals csv does not work (possible bug), so there is a 2nd column for the rule name
 terraform {
   required_version = ">=1.0"
   #  backend "azurerm" {}
