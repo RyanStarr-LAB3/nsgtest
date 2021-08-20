@@ -17,7 +17,7 @@ provider "azurerm" {
 }
 
 #create nsg
-resource "azurerm_network_security_group" "nsg1" {
+resource "azurerm_network_security_group" "nsg" {
   name                = "nsgruletest"
   location            = "Australia Southeast"
   resource_group_name = "Ryan-Dev"
@@ -29,7 +29,7 @@ locals {
 }
 
 #create nsg rules from locals csv file
-resource "azurerm_network_security_rule" "nsg" {
+resource "azurerm_network_security_rule" "nsgrules" {
   count = length(local.nsg_rules)
 
   name                        = local.nsg_rules[count.index].rule_name
@@ -42,5 +42,5 @@ resource "azurerm_network_security_rule" "nsg" {
   source_address_prefix       = local.nsg_rules[count.index].source_address_prefix
   destination_address_prefix  = local.nsg_rules[count.index].destination_address_prefix
   resource_group_name         = "Ryan-Dev"
-  network_security_group_name = azurerm_network_security_group.nsg1.name
+  network_security_group_name = azurerm_network_security_group.nsg.name
 }
